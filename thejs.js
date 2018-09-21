@@ -846,11 +846,11 @@ $(document).ready(function() {
   $(window).resize(onResize);
   $('.newemailbutton').click(addSubReddit);
   main_inbox = makeFolder('Front Page');
-  makeFolder('wyzecam');
-  makeFolder('galaxynote9');
-  makeFolder('jokes');
-  makeFolder('funny');
-  makeFolder('all');
+  makeFolder('Wyzecam');
+  makeFolder('GalaxyNote9');
+  makeFolder('Jokes');
+  makeFolder('Funny');
+  makeFolder('All');
   $('#folder_FrontPage').parent().addClass('foldwraphi');
   folderClick('folder_FrontPage');
   $('.outlookmin').click(function() {

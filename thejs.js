@@ -850,6 +850,7 @@ $(document).ready(function() {
   makeFolder('galaxynote9');
   makeFolder('jokes');
   makeFolder('funny');
+  makeFolder('all');
   $('#folder_FrontPage').parent().addClass('foldwraphi');
   folderClick('folder_FrontPage');
   $('.outlookmin').click(function() {

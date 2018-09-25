@@ -245,8 +245,8 @@ function myStory(parentJson, folder, addToDom) {
 
 function getRedditDomain() {
   return (window.location.protocol === 'https:') ?
-    'https://pay.reddit.com' :
-    'http://www.reddit.com';
+    'https://www.reddit.com' :
+    'https://www.reddit.com';
 }
 
 function populateStory(id) {
@@ -287,6 +287,7 @@ function commentsCallback(storyJSON) {
   }
   story.bodyHTML = unEncode(story.bodyHTML);
   story.bodyHTML += '<div class="storycommentline"></div>';
+  story.bodyHTML += '<a href="' + mainJSON.url + '">Link</a>';
   var commentsRoot = storyJSON[1].data.children;
   var commentsHTML = '';
   for (var i = 0; i < commentsRoot.length; i++) {
@@ -421,8 +422,8 @@ function lynxexpandoClick() {
     tempLynxAjaxID = finder;
     var finder2 = '#lynxlink' + tempid;
     var thelink = $(finder2).attr('href');
-    $(finder).text('Loading... please wait :D this crap takes a while because its my server and not yahoo');
-    makePopup('whoops! Sorry I had to take down my own server, I dont support this functionality anymore, but you can go ' +
+    $(finder).text('Loading... Please wait');
+    makePopup('Whoops! Sorry I had to take down my own server, I dont support this functionality anymore, but you can go ' +
       ' to the link here: \n ' + thelink);
     return;
   }

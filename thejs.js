@@ -287,9 +287,11 @@ function commentsCallback(storyJSON) {
   }
   story.bodyHTML = unEncode(story.bodyHTML);
   story.bodyHTML += '<div class="storycommentline"></div>';
+  // Cloyd
   var storyName = theStoryID.substr(3);
   var link = getRedditDomain() + '/comments/' + storyName;
-  story.bodyHTML += '<a href="' + link + '">Link</a>';
+  story.bodyHTML += '<a href="' + link + ' target="_blank"">Link</a>';
+  // Cloyd
   var commentsRoot = storyJSON[1].data.children;
   var commentsHTML = '';
   for (var i = 0; i < commentsRoot.length; i++) {

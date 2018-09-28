@@ -426,9 +426,8 @@ function lynxexpandoClick() {
     tempLynxAjaxID = finder;
     var finder2 = '#lynxlink' + tempid;
     var thelink = $(finder2).attr('href');
-    $(finder).text('Loading... Please wait');
-    makePopup('Whoops! Sorry I had to take down my own server, I dont support this functionality anymore, but you can go ' +
-      ' to the link here: \n ' + thelink);
+    $(finder).text('No longer supported. - Cloyd');
+    makePopup('No longer supported. - Cloyd');
     return;
   }
 }

@@ -1,4 +1,4 @@
-var noTaskbar = 1;
+var noTaskbar = 0;
 var alwaysHideNSFW = true;
 var randomNames = [
   'Rick Deckard',

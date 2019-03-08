@@ -1,4 +1,4 @@
-var noTaskbar = 0;
+var noTaskbar = 1;
 var alwaysHideNSFW = true;
 var randomNames = [
   'Rick Deckard',
@@ -221,7 +221,7 @@ function myStory(parentJson, folder, addToDom) {
   this.title = rootJson.title;
   if (rootJson.over_18) {
     if (!alwaysHideNSFW || true) {
-      this.title = this.title + '<b><font style="color:red"> NSFW</font></b>';
+      this.title = 'Move along, nothing to see here!' + '<b><font style="color:red"> NSFW</font></b>';
     }
   }
   previewHTML = previewHTML.replace('%author', author);

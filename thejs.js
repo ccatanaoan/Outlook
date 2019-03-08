@@ -221,14 +221,22 @@ function myStory(parentJson, folder, addToDom) {
   this.title = rootJson.title;
   if (rootJson.over_18) {
     if (!alwaysHideNSFW || true) {
-      this.title = 'Move along, nothing to see here!' + '<b><font style="color:red"> NSFW</font></b>';
+      this.title = 'Nothing to see here!' + '<b><font style="color:red"> Move along</font></b>';
     }
   }
   previewHTML = previewHTML.replace('%author', author);
   previewHTML = previewHTML.replace('%randomname', name);
   previewHTML = previewHTML.replace('%score', score);
   previewHTML = previewHTML.replace('%title', this.title);
-  previewHTML = previewHTML.replace('%subreddit', rootJson.subreddit);
+   
+  if (rootJson.over_18) {
+    if (!alwaysHideNSFW || true) {
+      previewHTML = previewHTML.replace('%subreddit', this.title);
+    }
+  }else{
+	  previewHTML = previewHTML.replace('%subreddit', rootJson.subreddit);
+  }
+
   previewHTML = previewHTML.replace('%domain', rootJson.domain);
   previewHTML = previewHTML.replace('%id', this.id);
   this.previewHTML = previewHTML;

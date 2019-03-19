@@ -224,6 +224,7 @@ function myStory(parentJson, folder, addToDom) {
       this.title = 'Nothing to see here!' + '<b><font style="color:red"> Move along</font></b>';
     }
   }
+    
   previewHTML = previewHTML.replace('%author', author);
   previewHTML = previewHTML.replace('%randomname', name);
   previewHTML = previewHTML.replace('%score', score);
@@ -237,6 +238,11 @@ function myStory(parentJson, folder, addToDom) {
 	  previewHTML = previewHTML.replace('%subreddit', rootJson.subreddit);
   }
 
+  if (rootJson.subreddit == 'PornhubComments') {
+    previewHTML = previewHTML.replace('%subreddit', 'Nothing to see here!');
+	previewHTML = previewHTML.replace('%title', 'Nothing to see here!');
+  }
+ 
   previewHTML = previewHTML.replace('%domain', rootJson.domain);
   previewHTML = previewHTML.replace('%id', this.id);
   this.previewHTML = previewHTML;

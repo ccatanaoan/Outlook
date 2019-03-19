@@ -534,7 +534,7 @@ function isImgur(externallink) {
   } else if (filetype == 'png' || filetype == 'peg' || filetype == 'jpg' || filetype == 'gif') {
     return true;
   } else {
-    return false;
+    return true;
   }
 }
 

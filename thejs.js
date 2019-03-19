@@ -304,7 +304,7 @@ function commentsCallback(storyJSON) {
   // Cloyd
   var storyName = theStoryID.substr(3);
   var link = getRedditDomain() + '/comments/' + storyName;
-  story.bodyHTML += '<a href="' + link + '" target="_blank">Link</a>';
+  story.bodyHTML += '<a href="' + link + '" target="_blank">Reddit Link</a>';
   // Cloyd
   var commentsRoot = storyJSON[1].data.children;
   var commentsHTML = '';

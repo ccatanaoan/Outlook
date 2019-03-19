@@ -289,7 +289,7 @@ function commentsCallback(storyJSON) {
     var expando = makeImgurExpando(mainJSON.url, mainJSON.title);
     story.bodyHTML += expando;
   } else {
-    story.bodyHTML += '<a href="' + mainJSON.url + '">' + mainJSON.title + '</a><br/>';
+    story.bodyHTML += '<a href="' + mainJSON.url + '" target="_blank">' + mainJSON.title + '</a><br/>';
     if (mainJSON.selftext_html) {
       story.bodyHTML += mainJSON.selftext_html;
     }

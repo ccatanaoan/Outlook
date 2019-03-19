@@ -234,15 +234,13 @@ function myStory(parentJson, folder, addToDom) {
     if (!alwaysHideNSFW || true) {
       previewHTML = previewHTML.replace('%subreddit', this.title);
     }
+  }else if (rootJson.subreddit == 'PornhubComments'){
+	  previewHTML = previewHTML.replace('%subreddit', 'Nothing to see here!');
+	  previewHTML = previewHTML.replace(this.title, 'Nothing to see here!');
   }else{
 	  previewHTML = previewHTML.replace('%subreddit', rootJson.subreddit);
   }
 
-  if (previewHTML.indexOf('PornhubComments') > -1) {
-    previewHTML = previewHTML.replace('%subreddit', 'Nothing to see here!');
-	previewHTML = previewHTML.replace('%title', 'Nothing to see here!');
-  }
- 
   previewHTML = previewHTML.replace('%domain', rootJson.domain);
   previewHTML = previewHTML.replace('%id', this.id);
   this.previewHTML = previewHTML;

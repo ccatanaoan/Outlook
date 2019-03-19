@@ -235,8 +235,8 @@ function myStory(parentJson, folder, addToDom) {
       previewHTML = previewHTML.replace('%subreddit', this.title);
     }
   }else if (rootJson.subreddit == 'PornhubComments'){
-	  previewHTML = previewHTML.replace('%subreddit', 'Nothing to see here!');
-	  previewHTML = previewHTML.replace(this.title, 'Nothing to see here!');
+	  previewHTML = previewHTML.replace('%subreddit', 'Nothing to see here!' + '<b><font style="color:red"> Move along</font></b>');
+	  previewHTML = previewHTML.replace(this.title, 'Nothing to see here!' + '<b><font style="color:red"> Move along</font></b>');
   }else{
 	  previewHTML = previewHTML.replace('%subreddit', rootJson.subreddit);
   }

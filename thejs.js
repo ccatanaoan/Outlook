@@ -219,17 +219,19 @@ function myStory(parentJson, folder, addToDom) {
   var score = rootJson.score;
   this.url = rootJson.url;
   this.title = rootJson.title;
+  // Cloyd
   if (rootJson.over_18) {
     if (!alwaysHideNSFW || true) {
       this.title = 'Nothing to see here!' + '<b><font style="color:red"> Move along</font></b>';
     }
   }
-    
+  // Cloyd  
   previewHTML = previewHTML.replace('%author', author);
   previewHTML = previewHTML.replace('%randomname', name);
   previewHTML = previewHTML.replace('%score', score);
   previewHTML = previewHTML.replace('%title', this.title);
-   
+  // Cloyd 
+  // Hide unwanted words
   if (rootJson.over_18) {
     if (!alwaysHideNSFW || true) {
       previewHTML = previewHTML.replace('%subreddit', this.title);
@@ -240,7 +242,7 @@ function myStory(parentJson, folder, addToDom) {
   }else{
 	  previewHTML = previewHTML.replace('%subreddit', rootJson.subreddit);
   }
-
+  // Cloyd
   previewHTML = previewHTML.replace('%domain', rootJson.domain);
   previewHTML = previewHTML.replace('%id', this.id);
   this.previewHTML = previewHTML;
@@ -863,6 +865,7 @@ $(document).ready(function() {
   $('.newemailbutton').click(addSubReddit);
   main_inbox = makeFolder('Front Page');
   makeFolder('Wyzecam');
+  makeFolder('tinycam');
   makeFolder('GalaxyNote9');
   makeFolder('Jokes');
   makeFolder('Funny');

@@ -863,13 +863,12 @@ $(document).ready(function() {
   onResize();
   $(window).resize(onResize);
   $('.newemailbutton').click(addSubReddit);
-  main_inbox = makeFolder('Front Page');
-  makeFolder('Wyzecam');
+  main_inbox = makeFolder('All');
+  makeFolder('accord');
+  makeFolder('EufyCam');
   makeFolder('tinycam');
-  makeFolder('GalaxyNote9');
-  makeFolder('Jokes');
-  makeFolder('Funny');
-  makeFolder('All');
+  makeFolder('Wyzecam');
+  makeFolder('Front Page');
   $('#folder_FrontPage').parent().addClass('foldwraphi');
   folderClick('folder_FrontPage');
   $('.outlookmin').click(function() {
